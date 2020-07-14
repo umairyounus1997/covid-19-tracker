@@ -37,17 +37,17 @@ export default function GlobalData() {
      }
 
      fetchGlobalData();
-  })
+  },[])
 
   return (
     <div className={classes.root}>
       <Paper elevation={3}>
       <div className={classTypography.root}>
       <Typography variant="h4" gutterBottom style={{color:'grey'}}>
-      1000
+      {globalData && globalData.results && globalData.results[0].total_cases}
       </Typography> 
       <Typography variant="subtitle2" gutterBottom style={{color:'grey', fontWeight:'bold'}}>
-        Global Data as of Todate
+        Global Data as of Today
       </Typography>
       </div>
         </Paper>
