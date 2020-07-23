@@ -11,6 +11,7 @@ const Cards = (props)=>{
             <Grid item component = {Card}>
             <CardContent>
             <Typography color = "textSecondary" gutterBottom>
+                
             Infected
             </Typography>
             </CardContent>
