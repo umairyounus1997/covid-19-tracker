@@ -10,10 +10,7 @@ const Cards = (props)=>{
         <Grid container spacing = {3} justify = 'center'>
             <Grid item component = {Card}>
             <CardContent>
-            <Typography color = "textSecondary" gutterBottom>
-                
-            Infected
-            </Typography>
+            <Typography color = "textSecondary" gutterBottom>Infected</Typography>
             </CardContent>
             </Grid>
         </Grid>
