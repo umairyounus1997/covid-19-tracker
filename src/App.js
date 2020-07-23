@@ -1,19 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-//Components
-import Header from './components/Header';
-import MainGrid from './components/MainGrid';
 
-function App() {
-  return (
-    <div>
-    <Header />
-    <br/>
-    <MainGrid/>
-    </div>
-  );
+// Import Components
+
+
+import {Cards, Chart, CountryPicker} from './components'; 
+
+//Import CSS
+import styles from './App.module.css';
+
+//Import API
+import {fetchData} from './api/index'
+
+
+class App extends React.Component{ 
+  
+  state = {
+    data: {},
+  }
+
+ async componentDidMount(){
+  const fetchedData = await fetchData();
+  
+  this.setState({data : fetchedData});
 }
 
+render(){
+  const{data} = this.state;
+  return (
+    <div className = {styles.container}>
+    <Cards data={data}/>
+    <Chart/>
+    <CountryPicker/>
+    </div>
+  )
+}
+}
 export default App;
