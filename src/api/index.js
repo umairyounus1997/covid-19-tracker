@@ -16,3 +16,12 @@ return {confirmed,recovered,deaths,lastUpdate};
 
     }
 }
+
+export const fetchDailyDate = async()=>{
+    try{
+        const response = await axios.get(`${url}/daily`);
+        console.log(data);
+    } catch(error){
+
+    }
+}
